@@ -2,7 +2,7 @@
 ## **Alejandro Gallardo Fernandez**
 
 Repositorio destinado a subir las prácticas y ejercicios de la asignatura de Servidores Web de Altas Prestaciones.
-Este repositorio se compone de tres carpetas *Ejercicios*, *Practicas*, *Trabajo*.
+Este repositorio se compone de tres carpetas *Ejercicios*, *Practicas* y *Trabajo*.
 
 ## **Ejercicios**:
 Aqui subire los ejercicios de teoria.
