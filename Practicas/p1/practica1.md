@@ -1,7 +1,7 @@
-#Práctica 1 
-##Alejandro Gallardo Fernández
+# Práctica 1 
+## Alejandro Gallardo Fernández
 
-##Instalación de **LAMP SERVER** y **SSH SERVER**
+## Instalación de **LAMP SERVER** y **SSH SERVER**
 En esta práctica he creado dos máquinas virtuales en las que he instalado el servidor **LAMP** y el 
 servidor **SSH**.
 
@@ -13,7 +13,7 @@ Una vez instalados, comprobé la versión de Apache con la orden *"apache2 -v"* 
 activo con la orden *"ps aux | grep apache"*.
 
 
-##Instalación de **CURL**
+## Instalación de **CURL**
 El siguiente paso de la práctica es instalar **cURL**, una herramienta en línea de comandos para transferir 
 archivos con sintaxis URL que soporta diferentes protocolos. Para instalar **cURL** en las máquinas usé la orden 
 *"sudo apt-get install curl"*.

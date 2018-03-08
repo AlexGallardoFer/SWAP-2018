@@ -1,14 +1,14 @@
 # SWAP-2018
-## **Alejandro Gallardo Fernandez**
+## **Alejandro Gallardo Fernández**
 
 Repositorio destinado a subir las prácticas y ejercicios de la asignatura de Servidores Web de Altas Prestaciones.
-Este repositorio se compone de tres carpetas *Ejercicios*, *Practicas* y *Trabajo*.
+Este repositorio se compone de tres carpetas *Ejercicios*, *Prácticas* y *Trabajo*.
 
 ## **Ejercicios**:
-Aqui subire los ejercicios de teoria.
+Aquí subiré los ejercicios de teoría.
 
-## **Practicas**:
-Aqui subire una carpeta para cada una de las cinco practicas.
+## **Prácticas**:
+Aquí subiré una carpeta para cada una de las cinco prácticas.
 
 ## **Trabajo**:
-Aqui subire la documentacion del trabajo.
+Aquí subiré la documentación del trabajo.
