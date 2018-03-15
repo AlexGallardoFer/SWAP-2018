@@ -66,5 +66,5 @@ línea: *\* \* \* \* \* alexgallardo rsync -avz -e ssh
 
 Si en vez de poner números ponemos \* en su lugar, estamo marcando *todo*, 
 por ejemplo, si ponemos \* en los *días* del mes, se ejecutará **todos** 
-los días de el mes que esté especificado (o todos en caso de un \* en los 
+los días del mes que esté especificado (o todos en caso de un \* en los 
 *meses*).
