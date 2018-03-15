@@ -1,4 +1,4 @@
-# Práctica 1 
+# Práctica 1: Preparación de las herramientas 
 ## Alejandro Gallardo Fernández
 
 ## Instalación de **LAMP SERVER** y **SSH SERVER**
