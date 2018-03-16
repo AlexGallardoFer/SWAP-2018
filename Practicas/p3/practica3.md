@@ -10,5 +10,8 @@ sometiéndoles a una alta carga.
 
 ## Instalar **nginx** en ubuntu server
 Se recomienda el uso de esta orden para instalar **nginx**: *sudo apt-get update && sudo apt-get dist-upgrade && 
-sudo apt-get autoremove*. Después la orden: *sudo apt-get install nginx*. Y por último, la orden: *sudo 
-systemctl start nginx*. 
+sudo apt-get autoremove*.
+Después la orden: *sudo apt-get install nginx*.
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20nginx.png)
+Y por último, la orden: *sudo systemctl start nginx*.
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/start%20nginx.png) 
