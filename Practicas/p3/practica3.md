@@ -15,3 +15,13 @@ Después la orden: *sudo apt-get install nginx*.
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20nginx.png)
 Y por último, la orden: *sudo systemctl start nginx*.
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/start%20nginx.png) 
+
+Una vez instalado, podemos proceder a su configuración como balanceador de carga.
+
+## Balanceo de carga usando nginx
+La configuración básica de nginx no nos sirve como está porque corresponde con la 
+funcionalidad de un servidor web, así que tenemos que modificar el fichero 
+*/etc/nginx/conf.d/default.conf*. El fichero debería quedar con este contenido:
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/configuracion%20nginx.png)
+
+
