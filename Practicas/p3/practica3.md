@@ -31,3 +31,10 @@ Una vez configurado, lanzamos el servicio **nginx** con la siguiente orden: *sud
 ahora.
 > 2. Cambiamos los index.html de las primeras dos máquinas para reconocer a cual nos está llevando el 
 balanceador.
+
+Después de lanzar el servicio **nginx** (y, si no nos ha dado fallos) probamos a hacer peticiones a la IP de 
+esta máquina y deberíamos de ver como va alternando entre la máquina 1 y la máquina 2.
+
+Efectivamente, funciona!
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/m1.png)
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/m2.png)
