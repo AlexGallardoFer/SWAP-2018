@@ -12,8 +12,11 @@ sometiéndoles a una alta carga.
 Se recomienda el uso de esta orden para instalar **nginx**: *sudo apt-get update && sudo apt-get dist-upgrade && 
 sudo apt-get autoremove*.
 Después la orden: *sudo apt-get install nginx*.
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20nginx.png)
+
 Y por último, la orden: *sudo systemctl start nginx*.
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/start%20nginx.png) 
 
 Una vez instalado, podemos proceder a su configuración como balanceador de carga.
@@ -22,6 +25,7 @@ Una vez instalado, podemos proceder a su configuración como balanceador de carg
 La configuración básica de nginx no nos sirve como está porque corresponde con la 
 funcionalidad de un servidor web, así que tenemos que modificar el fichero 
 */etc/nginx/conf.d/default.conf*. El fichero debería quedar con este contenido:
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/configuracion%20nginx.png)
 
 Una vez configurado, lanzamos el servicio **nginx** con la siguiente orden: *sudo systemctl start nginx*
@@ -35,8 +39,11 @@ balanceador.
 Después de lanzar el servicio **nginx** (y, si no nos ha dado fallos) probamos a hacer peticiones a la IP de 
 esta máquina y deberíamos de ver como va alternando entre la máquina 1 y la máquina 2.
 
+
 Efectivamente, funciona!
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/m1.png)
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/m2.png)
 
 Otra opción que tenemos es cambiar el *"peso"* de las máquinas. Si una 
@@ -45,12 +52,14 @@ mandará más peticiones a esa máquina, por ejemplo si a la máquina 1 le
 ponemos un peso de 1 y a la máquina 2 un peso de 2, la máquina 2 recibirá 
 el doble de carga que la máquina 1. Para cambiar el peso (por defecto es 1 
 para todas las máquinas) hay que añadir un par de cosas:
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/pesos.png)
 
 Aunque esta configuración es muy útil a nosotros nos interesa que las 
 peticiones que vengan de la misma IP se dirijan a la misma máquina servidora 
 final para evitar problemas. Para solucionar eso, hacemos un balanceo por IP, 
 para ello usaremos la directiva *ip_hash*:
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/ip_hash.png)
 
 Pero la desventaja que hay en el balanceo *ip_hash* es que todos los usuarios 
@@ -61,6 +70,7 @@ A partir de la versión 1.2 de **nginx** se pueden usar ya conexiones con
 *keepalive* entre el **nginx** y los servidores finales. Tenemos que volver a 
 modificar nuestro *upstream*, añadiendo la directiva *keepalive* y un tiempo de 
 mantenimiento de la conexión en segundos:
+
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/keepalive.png)
 
 
