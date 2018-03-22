@@ -8,7 +8,7 @@ carga distintos, para que repartan la carga entre las dos máquinas que creamos 
 **haproxy**. Mediremos el rendimiento de los dos balanceadores por separado 
 sometiéndoles a una alta carga.
 
-## Instalar **nginx** en ubuntu server
+## Instalar *nginx* en ubuntu server
 Se recomienda el uso de esta orden para instalar **nginx**: *sudo apt-get update && sudo apt-get dist-upgrade && 
 sudo apt-get autoremove*.
 Después la orden: *sudo apt-get install nginx*.
@@ -21,7 +21,7 @@ Y por último, la orden: *sudo systemctl start nginx*.
 
 Una vez instalado, podemos proceder a su configuración como balanceador de carga.
 
-## Balanceo de carga usando nginx
+## Balanceo de carga usando *nginx*
 La configuración básica de nginx no nos sirve como está porque corresponde con la 
 funcionalidad de un servidor web, así que tenemos que modificar el fichero 
 */etc/nginx/conf.d/default.conf*. El fichero debería quedar con este contenido:
@@ -73,5 +73,20 @@ mantenimiento de la conexión en segundos:
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/keepalive.png)
 
+Y hasta aquí la parte de **nginx**, pero antes de seguir, paramos el servicio 
+con la orden: *sudo systemctl stop nginx*. Ahora toca empezar la parte de **haproxy**.
 
-## ~~~~~~~~
+## Instalar *haproxy*
+Lo primero que tenemos que hacer es instalar **haproxy**: *sudo apt-get install 
+haproxy*.
+
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20haproxy)
+
+Una vez instalado, modificamos el archivo */etc/haproxy/haproxy.cfg* porque 
+como viene por defecto no nos sirve. Por ahora lo dejaremos como en la 
+siguiente imagen:
+
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/configuracion%20haproxy.png)
+
+## Comprobar el funcionamiento del balanceador
+
