@@ -24,4 +24,10 @@ funcionalidad de un servidor web, así que tenemos que modificar el fichero
 */etc/nginx/conf.d/default.conf*. El fichero debería quedar con este contenido:
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/configuracion%20nginx.png)
 
+Una vez configurado, lanzamos el servicio **nginx** con la siguiente orden: *sudo systemctl start nginx*
 
+> Cosas a tener en cuenta a la hora de comprobar que que el balanceador funcione:
+> 1. Tenemos que evitar que el *rsync* que tenemos progamado en el crontab se haga, así que lo comentamos por 
+ahora.
+> 2. Cambiamos los index.html de las primeras dos máquinas para reconocer a cual nos está llevando el 
+balanceador.
