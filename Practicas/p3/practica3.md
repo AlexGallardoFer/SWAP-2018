@@ -38,3 +38,30 @@ esta máquina y deberíamos de ver como va alternando entre la máquina 1 y la m
 Efectivamente, funciona!
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/m1.png)
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/m2.png)
+
+Otra opción que tenemos es cambiar el *"peso"* de las máquinas. Si una 
+máquina es más potente que otra, le ponemos más peso, y el balanceador 
+mandará más peticiones a esa máquina, por ejemplo si a la máquina 1 le 
+ponemos un peso de 1 y a la máquina 2 un peso de 2, la máquina 2 recibirá 
+el doble de carga que la máquina 1. Para cambiar el peso (por defecto es 1 
+para todas las máquinas) hay que añadir un par de cosas:
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/pesos.png)
+
+Aunque esta configuración es muy útil a nosotros nos interesa que las 
+peticiones que vengan de la misma IP se dirijan a la misma máquina servidora 
+final para evitar problemas. Para solucionar eso, hacemos un balanceo por IP, 
+para ello usaremos la directiva *ip_hash*:
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/ip_hash.png)
+
+Pero la desventaja que hay en el balanceo *ip_hash* es que todos los usuarios 
+de un proxy serán dirigidos al mismo backend y supone que el balanceo no sea 
+equilibrado. Para evitar esto se pueden usar *cookies* para balancear.
+
+A partir de la versión 1.2 de **nginx** se pueden usar ya conexiones con 
+*keepalive* entre el **nginx** y los servidores finales. Tenemos que volver a 
+modificar nuestro *upstream*, añadiendo la directiva *keepalive* y un tiempo de 
+mantenimiento de la conexión en segundos:
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/keepalive.png)
+
+
+## ~~~~~~~~
