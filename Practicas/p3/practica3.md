@@ -80,7 +80,7 @@ con la orden: *sudo systemctl stop nginx*. Ahora toca empezar la parte de **hapr
 Lo primero que tenemos que hacer es instalar **haproxy**: *sudo apt-get install 
 haproxy*.
 
-![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20haproxy)
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20haproxy.png)
 
 Una vez instalado, modificamos el archivo */etc/haproxy/haproxy.cfg* porque 
 como viene por defecto no nos sirve. Por ahora lo dejaremos como en la 
