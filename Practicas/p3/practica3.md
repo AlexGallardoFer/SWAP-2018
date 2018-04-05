@@ -97,6 +97,8 @@ Si no sale error, ya estaría hecho y podríamos comprobarlo como lo hicimos con
 **nginx**, usando **cURL** con la IP de la máquina balanceadora para ver como 
 nos manda a una máquina o a otra.
 
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/install%20haproxy.png)
+
 Funciona perfectamente.
 
 ## Someter a una alta carga al servidor balanceado
