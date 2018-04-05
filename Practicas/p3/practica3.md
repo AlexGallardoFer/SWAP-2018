@@ -110,15 +110,15 @@ forman parte de la granja web (servidores web o balanceador) para que así no
 consuman recursos de la misma máquina y habría un menor rendimiento. La orden 
 que hay que utilizar es la siguiente: *ab -n 1000 -c 10 http:192.168.150.130/index.html*.
 
-Primero vamos a someter la carga usando el balanceador **nginx**:
+Primero vamos a someter al balanceador **nginx** la carga:
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaNginx1.png)
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaNginx2.png)
 
-Ahora usando **haproxy**:
+Ahora vamos a someter al balanceador **haproxy**:
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaHaproxy1.png)
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaHaproxy2.png)
 
 
-Como podemos ver, el balanceador de carga **nginx** ha sido (para este caso) más rápido que **haproxy**.
+Como podemos ver, el balanceador de carga **nginx** es más rápido que **haproxy**, al menos en este caso.
