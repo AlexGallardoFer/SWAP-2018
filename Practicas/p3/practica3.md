@@ -121,4 +121,5 @@ Ahora vamos a someter al balanceador **haproxy**:
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaHaproxy2.png)
 
 
-Como podemos ver, el balanceador de carga **nginx** es más rápido que **haproxy**, al menos en este caso.
+Como podemos ver, el balanceador de carga **haproxy** es más rápido que **nginx**, mirando el tiempo total que 
+ha tardado en hacer el test.
