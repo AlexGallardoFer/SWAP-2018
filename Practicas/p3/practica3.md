@@ -90,3 +90,33 @@ siguiente imagen:
 
 ## Comprobar el funcionamiento del balanceador
 
+Una vez que ya tenemos la configuración en el fichero, lanzamos **haproxy** con 
+el siguiente comando: *sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg*.
+
+Si no sale error, ya estaría hecho y podríamos comprobarlo como lo hicimos con 
+**nginx**, usando **cURL** con la IP de la máquina balanceadora para ver como 
+nos manda a una máquina o a otra.
+
+Funciona perfectamente.
+
+## Someter a una alta carga al servidor balanceado
+Vamos a usar una herramienta llamada **Apache Benchmark** para comprobar el 
+rendimiento de nuestra granga web recién configurada.
+
+Lo suyo es que ejecutemos el benchmark en otra máquina diferente a las que 
+forman parte de la granja web (servidores web o balanceador) para que así no 
+consuman recursos de la misma máquina y habría un menor rendimiento. La orden 
+que hay que utilizar es la siguiente: *ab -n 1000 -c 10 http:192.168.150.130/index.html*.
+
+Primero vamos a someter la carga usando el balanceador **nginx**:
+
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaNginx1.png)
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaNginx2.png)
+
+Ahora usando **haproxy**:
+
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaHaproxy1.png)
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p3/img/cargaHaproxy2.png)
+
+
+Como podemos ver, el balanceador de carga **nginx** ha sido (para este caso) más rápido que **haproxy**.
