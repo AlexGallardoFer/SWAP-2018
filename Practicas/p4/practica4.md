@@ -33,4 +33,34 @@ Usamos la herramienta curl para hacer peticiones por HTTPS:
 
 > foto
 
-### Configuración del cortafuegos
+Al acabar todo esto habremos "terminado" con M1, ahora hay que copiarles 
+los dos archivos que creamos al principio a la M2 y al balanceador.
+
+Tenemos que copiarlos tal cual, no sirve hacer las órdenes de nuevo en esas 
+máquinas porque crearían archivos diferentes y no queremos eso.
+
+Además de copiarlos, en el balanceador hay que configurar algunas cosillas 
+en los archivos de configuración del programa que hace el balanceo para que 
+todo funcione.
+
+>foto
+
+### Configuración del cortafuegos iptables
+Vamos a ver cómo utilizar la herramienta para establecer ciertas reglas y 
+filtrar algunos tipos de tráfico o controlar el acceso a ciertas páginas.
+
+Hay un montón de órdenes para configurar **iptables**, y están en el guión 
+de la práctica.
+
+Lo más común es **crear un script** que se ejecute en el arranque del 
+sistema. Vamos a ver cómo realizar una configuración básica para un 
+servidor web:
+
+> foto
+
+Hecho esto en la M1, ya solo queda probar que funcione haciendo peticiones 
+HTTP y HTTPS tanto a la M1 como al balanceador y ver que funciona.
+
+> foto
+
+Todo funciona correctamente :octocat:
