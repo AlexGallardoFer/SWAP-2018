@@ -63,4 +63,4 @@ HTTP y HTTPS tanto a la M1 como al balanceador y ver que funciona.
 
 > foto
 
-Todo funciona correctamente :octocat:
+Todo funciona correctamente :octocat:.
