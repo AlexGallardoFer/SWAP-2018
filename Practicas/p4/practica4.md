@@ -18,7 +18,7 @@ Nos va a pedir una serie de datos para configurar el dominio.
 
 Editamos el archivo de configuración del sitio default-ssl con la 
 orden: *nano /etc/apache2/sites-available/default-ssl* y agregamos un par 
-de lineas debajo de *'SSLENgine on'*
+de lineas debajo de *'SSLEngine on'*
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p4/img/sslengine.png)
 
@@ -44,7 +44,7 @@ Además de copiarlos, en el balanceador hay que configurar algunas cosillas
 en los archivos de configuración del programa que hace el balanceo para que 
 todo funcione.
 
->foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p4/img/conf_nginx.png)
 
 ### Configuración del cortafuegos iptables
 Vamos a ver cómo utilizar la herramienta para establecer ciertas reglas y 
@@ -57,11 +57,11 @@ Lo más común es **crear un script** que se ejecute en el arranque del
 sistema. Vamos a ver cómo realizar una configuración básica para un 
 servidor web:
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p4/img/conf_cortafuegos.png)
 
-Hecho esto en la M1, ya solo queda probar que funcione haciendo peticiones 
-HTTP y HTTPS tanto a la M1 como al balanceador y ver que funciona.
+Hecho esto, ya solo nos queda hacer que el script se ejecute en el inicio 
+de la M1, para ello editamos el *crontab*:
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p4/img/crontab_m1.png)
 
-Todo funciona correctamente :octocat:.
+Todo terminado :) :octocat:.
