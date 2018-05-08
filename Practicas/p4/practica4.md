@@ -64,4 +64,4 @@ de la M1, para ello editamos el *crontab*:
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p4/img/crontab_m1.png)
 
-Todo terminado :) :octocat:.
+Todo terminado :). :octocat::octocat:
