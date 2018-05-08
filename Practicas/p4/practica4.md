@@ -12,10 +12,11 @@ siguientes órdenes:
 * openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout 
 /etc/apache2/sl/apache.key -out /etc/apache2/ssl/apache.crt
 
-> foto
-
 Nos va a pedir una serie de datos para conigurar el dominio.
-Así que editamos el archivo de configuración del sitio default-ssl con la 
+
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p4/img/install_ssl.png)
+
+Editamos el archivo de configuración del sitio default-ssl con la 
 orden: *nano /etc/apache2/sites-available/default-ssl* y agregamos un par 
 de lineas debajo de *'SSLENgine on'*
 
