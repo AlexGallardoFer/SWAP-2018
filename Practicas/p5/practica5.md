@@ -10,4 +10,4 @@
 
 
 
-### Replicación de BD mediante una configuración **_maestro-esclavo_**
+### Replicación de BD mediante una configuración ***maestro-esclavo***
