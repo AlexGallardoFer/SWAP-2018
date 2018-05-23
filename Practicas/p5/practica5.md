@@ -8,7 +8,7 @@ insertarle algunos datos. De esta forma tendremos datos con los que
 podremos hacer copias de seguridad. Usaremos la interfaz de línea de 
 comandos de MySQL:
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img1.png)
 
 Ahora que tenemos datos insertados en nuestra BD (llamados "datos"), vamos 
 a ver cómo entrar y hacer una consulta.
