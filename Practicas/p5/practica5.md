@@ -44,7 +44,7 @@ importar la BD completa en el MySQL. Para ello creamos primero la BD:
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img5.png)
 
-Luego restauramos los datos contenidos en la BD con la orden: *mysqldump -u 
+Luego restauramos los datos contenidos en la BD con la orden: *mysql -u 
 root -p ejemplodb < /tmp/ejemplodb.sql*.
 
 
@@ -63,7 +63,7 @@ siguientes modificaciones.
 
 - Comentamos el parámetro bind-address que sirve para que que escuche a un 
 servidor.
-> #bind-address 192.168.150.128
+> #bind-address 127.0.0.1
 - Le indicamos dónde almacenar el log de errores.
 > log_error = /var/log/mysql/error.log
 -Establecemos el identificador del servidor.
