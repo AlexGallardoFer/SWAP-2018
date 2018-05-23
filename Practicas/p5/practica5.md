@@ -56,3 +56,19 @@ a partir de los datos que al macena el maestro.
 Como configuramos un demonio, se trata de un proceso automático que ya es 
 mucho más cómodo, aunque hay que configurar tanto el servidor principal 
 como el secundario.
+
+Lo primero que tenemos que hacer es hacer la configuración del maestro. 
+Para ello editamos el archivo de configuración de mysql para realizar las 
+siguientes modificaciones.
+
+- Comentamos el parámetro bind-address que sirve para que que escuche a un 
+servidor.
+> #bind-address 192.168.150.128
+- Le indicamos dónde almacenar el log de errores.
+> log_error = /var/log/mysql/error.log
+-Establecemos el identificador del servidor.
+> server-id = 1
+- Guardamos el documento y reiniciamos el servicio.
+> /etc/init.d/mysql restart
+
+
