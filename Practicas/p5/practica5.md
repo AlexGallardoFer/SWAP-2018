@@ -13,7 +13,7 @@ comandos de MySQL:
 Ahora que tenemos datos insertados en nuestra BD (llamados "datos"), vamos 
 a ver cómo entrar y hacer una consulta.
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img2.png)
 
 
 ### Replicar una BD MySQL con *mysqldump*
@@ -25,14 +25,14 @@ podemos ver muchas de ellas.
 Lo primero que tendríamos que hacer es ejecutar las siguientes órdenes en 
 la máquina 1 (servidor BD principal):
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img3.png)
 
 Luego ejecutamos (también en la máquina 1) el siguiente comando: *mysqldump 
 ejemplodb -u root -p > /tmp/ejemplodb.sql*.
 Y como habíamos bloqueado las tablas, las tenemos que desbloquear, o sea, 
 quitar el "LOCK".
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img4.png)
 
 Ahora ya podemos irnos a la máquina 2, la máquina esclava, para copiar el 
 archivo .SQL con todos los datos guardados desde la máquina 1. Usamos la 
@@ -42,7 +42,7 @@ máquina 1 a la máquina 2 los datos que hay almacenados en la BD.
 Una vez que ya tenemos la copia de seguridad en el esclavo ya podemos 
 importar la BD completa en el MySQL. Para ello creamos primero la BD:
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img5.png)
 
 Luego restauramos los datos contenidos en la BD con la orden: *mysqldump -u 
 root -p ejemplodb < /tmp/ejemplodb.sql*.
@@ -75,20 +75,20 @@ servidor.
 Ahora ya podemos pasar a la configuración del mysql del esclavo (hay que 
 editar su archivo de configuración).
 
-> ¿foto?
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img6.png)
 
 La configuración es igual que la del maestro con la diferencia de que el 
 *server-id* será 2. Reiniciamos el servicio.
 
 Entramos en mysql y ejecutamos las siguientes órdenes:
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img7.png)
 
 Volvemos a la máquina esclava, entramos en mysql y le damos los datos del 
 maestro. Entramos en el entorno de mysql y ejecutaremos la siguiente 
 sentencia:
 
-> foto
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img8.png)
 
 Arrancamos el esclavo con la orden: *mysql> START SLAVE;* y ya 
 está todo listo para que los demonios 
