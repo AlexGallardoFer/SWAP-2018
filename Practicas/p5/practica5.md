@@ -103,3 +103,6 @@ Ahora comprobamos que, efectivamente, el esclavo funciona comprobando su estado 
 *Seconds_Behind_Master* es distinto de *null*.
 
 ![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img8.png)
+
+Como podemos ver, es 0, que es distinto de null, y por tanto funciona correctamente.
+:octocat::octocat:
