@@ -75,20 +75,18 @@ servidor.
 Ahora ya podemos pasar a la configuración del mysql del esclavo (hay que 
 editar su archivo de configuración).
 
-![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img6.png)
-
 La configuración es igual que la del maestro con la diferencia de que el 
 *server-id* será 2. Reiniciamos el servicio.
 
 Entramos en mysql y ejecutamos las siguientes órdenes:
 
-![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img7.png)
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img6.png)
 
 Volvemos a la máquina esclava, entramos en mysql y le damos los datos del 
 maestro. Entramos en el entorno de mysql y ejecutaremos la siguiente 
 sentencia:
 
-![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img8.png)
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img7.png)
 
 Arrancamos el esclavo con la orden: *mysql> START SLAVE;* y ya 
 está todo listo para que los demonios 
@@ -98,5 +96,10 @@ cambien en el maestro.
 A partir de aqui ya podemos hacer pruebas en el maestro y se deberían de 
 replicar en el esclavo automáticamente.
 
-Por último colvemos al maestro y volvemos a activar las tablas para que 
+Por último volvemos al maestro y volvemos a activar las tablas para que 
 puedan meterse nuevos datos en el maestro: *mysql> UNLOCK TABLES;*
+
+Ahora comprobamos que, efectivamente, el esclavo funciona comprobando su estado y viendo si el atributo: 
+*Seconds_Behind_Master* es distinto de *null*.
+
+![img](https://github.com/Taunerify/SWAP-2018/blob/master/Practicas/p5/img/img8.png)
